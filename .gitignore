@@ -27,6 +27,9 @@ Thumbs.db
 CONTEXTO_MORK.md
 ESTADO_PROYECTO.md
 
+# Private Nexora product notes
+NEXORA_NOTAS_PRIVADAS.md
+
 # Private project backups and credential files
 *.pem
 *.key
