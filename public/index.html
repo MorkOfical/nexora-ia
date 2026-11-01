@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#100d19">
+    <title>Nexora IA</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Conversaciones">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">M</div>
+          <div>
+            <p class="eyebrow">Asistente local</p>
+            <h1>Nexora IA</h1>
+          </div>
+        </div>
+
+        <button class="new-chat-button" id="new-chat-button" type="button">
+          <span aria-hidden="true">＋</span> Nueva conversación
+        </button>
+
+        <div class="sidebar-section-heading">
+          <span>Tu espacio</span>
+          <span class="section-count" id="conversation-count">0</span>
+        </div>
+        <nav id="conversation-list" class="conversation-list" aria-label="Lista de conversaciones"></nav>
+
+        <div class="sidebar-footer">
+          <span class="local-dot" aria-hidden="true"></span>
+          <span>Se ejecuta en esta computadora</span>
+        </div>
+      </aside>
+
+      <main class="chat-panel">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Proyecto personal</p>
+            <h2>Tu asistente para aprender y construir</h2>
+          </div>
+          <div class="status-pill" id="model-status" aria-live="polite">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span>Revisando modelo local…</span>
+          </div>
+        </header>
+
+        <section class="messages" id="messages" aria-live="polite" aria-label="Mensajes">
+          <div class="empty-state" id="empty-state">
+            <div class="empty-orbit" aria-hidden="true"><span>M</span></div>
+            <p class="eyebrow">Bienvenido a tu espacio</p>
+            <h3>¿Qué quieres aprender o construir hoy?</h3>
+            <p>Nexora IA leerá el contexto local del proyecto y guardará tus conversaciones en una base de datos de esta computadora.</p>
+            <div class="suggestion-row">
+              <button class="suggestion" type="button">Explícame cómo se conecta una API con una base de datos</button>
+              <button class="suggestion" type="button">Ayúdame a planear el primer módulo de Nexora IA</button>
+            </div>
+          </div>
+        </section>
+
+        <div class="notice" id="notice" role="status" hidden></div>
+
+        <form class="composer" id="composer">
+          <label class="visually-hidden" for="message-input">Escribe tu mensaje</label>
+          <textarea id="message-input" rows="1" maxlength="10000" placeholder="Escribe una pregunta o idea…"></textarea>
+          <div class="composer-footer">
+            <p>Las conversaciones se guardan localmente.</p>
+            <button class="send-button" id="send-button" type="submit" aria-label="Enviar mensaje">
+              <span>Enviar</span><span aria-hidden="true">↑</span>
+            </button>
+          </div>
+        </form>
+      </main>
+
+      <aside class="context-panel" aria-label="Estado del asistente">
+        <div class="context-card assistant-card">
+          <p class="eyebrow">Nexora IA</p>
+          <h2>Aprender haciendo</h2>
+          <p>Una asistente personal que crece junto con tu proyecto y tu experiencia.</p>
+        </div>
+
+        <div class="context-card">
+          <p class="eyebrow">Modelo local</p>
+          <h3 id="model-name">Qwen3 1.7B</h3>
+          <p id="model-description">Pendiente de conectar. La aplicación ya tiene preparado el punto de conexión local.</p>
+        </div>
+
+        <div class="context-card">
+          <p class="eyebrow">Contexto activo</p>
+          <h3>CONTEXTO_MORK.md</h3>
+          <p>Se consulta desde tu carpeta local para conservar las decisiones y preferencias del proyecto.</p>
+        </div>
+
+        <div class="privacy-note">
+          <span aria-hidden="true">◆</span>
+          <p>Esta versión solo acepta conexiones desde tu propia computadora.</p>
+        </div>
+      </aside>
+    </div>
+  </body>
+</html>

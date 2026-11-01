@@ -1,0 +1,19 @@
+{
+  "name": "nexora-ia",
+  "version": "1.0.0",
+  "description": "Proyecto personal de Mork para construir una asistente de IA local y aprender mediante una aplicación real.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "better-sqlite3": "13.0.3",
+    "express": "5.3.0"
+  }
+}
